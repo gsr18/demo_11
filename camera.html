@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Camera Awareness</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: #00ff00;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h2 {
+      margin: 20px 0;
+      text-shadow: 0 0 10px #00ff00;
+    }
+
+    .camera-frame {
+      width: 90%;
+      max-width: 300px;
+      height: 200px;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      background: #111;
+      position: relative;
+      box-shadow: 0 0 20px #00ff00;
+      animation: scan 2s infinite;
+    }
+
+    @keyframes scan {
+      0% { box-shadow: 0 0 10px #00ff00; }
+      50% { box-shadow: 0 0 20px #00ff00; }
+      100% { box-shadow: 0 0 10px #00ff00; }
+    }
+
+    .warning {
+      margin: 20px;
+      font-size: 1rem;
+      text-align: center;
+      color: #ff4040;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: 2px solid #00ff00;
+      border-radius: 8px;
+      background: #111;
+      color: #00ff00;
+      text-decoration: none;
+      font-size: 1rem;
+      box-shadow: 0 0 10px #00ff00;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #00ff00;
+      color: black;
+      box-shadow: 0 0 20px #00ff00;
+    }
+  </style>
+</head>
+<body>
+  <h2>📷 Camera Access Detected</h2>
+  <div class="camera-frame">
+    <!-- Placeholder for simulation -->
+  </div>
+  <div class="warning">
+    ⚠️ Be aware! Many apps can silently access your camera and record videos or photos without your knowledge. <br><br>
+    ➤ Always check permissions.<br>
+    ➤ Revoke access if not required.<br>
+    ➤ Use camera covers for privacy.
+  </div>
+  <a class="back-btn" href="dashboard.html">🔙 Back to Dashboard</a>
+</body>
+</html>

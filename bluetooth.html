@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bluetooth Access Awareness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #9966ff;
+      text-shadow: 0 0 10px #9966ff;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .bluetooth-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    .bluetooth-icon {
+      font-size: 60px;
+      color: #9966ff;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .info {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #e0ddfa;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #9966ff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px #9966ff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #9966ff;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <h2>📶 Bluetooth Access Awareness</h2>
+
+  <div class="bluetooth-container">
+    <i class="fas fa-bluetooth-b bluetooth-icon"></i>
+  </div>
+
+  <div class="info">
+    ⚠️ Bluetooth can be used to connect and exchange data with nearby devices.<br>
+    🔹 Unknown apps with Bluetooth access might connect to unknown hardware.<br>
+    🔹 This can lead to tracking, unauthorized data exchange, or attacks.<br>
+    🔹 Always turn off Bluetooth when not in use and allow only trusted apps to access it.
+  </div>
+
+  <a class="back-btn" href="dashboard.html">🔙 Back to Dashboard</a>
+
+</body>
+</html>

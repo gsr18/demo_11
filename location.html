@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Live Location Awareness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #0a0a0a, #1e1e1e);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffff;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .map {
+      width: 100%;
+      max-width: 350px;
+      height: 350px;
+      border-radius: 15px;
+      background: url('https://i.imgur.com/9QbA5aQ.png') center/cover no-repeat;
+      position: relative;
+      margin-bottom: 20px;
+      box-shadow: 0 0 15px #00ffcc;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    .pin {
+      width: 24px;
+      height: 24px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 10px red;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -60%) scale(1.1); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 15px #00ffcc; }
+      50% { box-shadow: 0 0 25px #00ffcc; }
+    }
+
+    .info {
+      font-size: 0.95rem;
+      text-align: center;
+      color: #ff6666;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .back-btn {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      background: #00ffcc;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00ffcc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffcc;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>📍 Real-Time Location Simulation</h2>
+
+  <div class="map">
+    <div class="pin"></div>
+  </div>
+
+  <div class="info">
+    ⚠️ Many apps secretly track your real-time location.<br>
+    🔹 Avoid granting location access unless necessary.<br>
+    🔹 Turn off GPS when not needed.<br>
+    🔹 Check permissions regularly in phone settings.
+  </div>
+
+  <a class="back-btn" href="dashboard.html">🔙 Back to Dashboard</a>
+
+</body>
+</html>

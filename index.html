@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>System Access Awareness</title>
+
+  <style>
+    /* Global Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Courier New', Courier, monospace;
+      background: black;
+      color: #00ffcc;
+      overflow: hidden;
+    }
+
+    /* Matrix Background */
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    /* Glitch Text Animation */
+    .glitch {
+      font-size: 2.8rem;
+      position: relative;
+      text-align: center;
+      margin-top: 10vh;
+      color: #00ffcc;
+      animation: glitch 1.5s infinite;
+      text-shadow: 0 0 5px #00ffcc;
+    }
+
+    @keyframes glitch {
+      0% { transform: none; }
+      20% { transform: translateX(3px); }
+      40% { transform: translateX(-3px); }
+      60% { transform: translateX(2px); }
+      80% { transform: translateX(-2px); }
+      100% { transform: none; }
+    }
+
+    /* Typewriter Intro */
+    .typewriter {
+      text-align: center;
+      color: #00ffcc;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 3px solid #00ffcc;
+      width: 0;
+      margin: 30px auto;
+      font-size: 1.2rem;
+      animation: typing 5s steps(60, end) forwards, blink 0.8s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 95%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    /* Button */
+    .enter-btn {
+      display: block;
+      margin: 40px auto;
+      padding: 15px 30px;
+      background-color: #00ffcc;
+      color: black;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #00ffcc;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffcc;
+    }
+
+    /* Footer */
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #008f8f;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="matrixCanvas"></canvas>
+
+  <div class="glitch">🔐 CYBER AWARENESS PORTAL</div>
+
+  <div class="typewriter">
+    Welcome, Agent. Your system is vulnerable... Proceed to Dashboard for access insights.
+  </div>
+
+  <a href="dashboard.html" class="enter-btn">💻 Enter Dashboard</a>
+
+  <div class="footer">© 2025 | Project SocioIssues | Awareness Mode: ON</div>
+
+  <!-- Matrix Animation Script -->
+  <script>
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Fullscreen canvas
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const matrixChars = "010101101100101110101001011010010";
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ffcc";
+      ctx.font = `${fontSize}px monospace`;
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    setInterval(drawMatrix, 33);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Network Access Awareness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #000a0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .network-icon {
+      font-size: 60px;
+      color: #00ffff;
+      animation: flicker 1.8s infinite;
+      margin-top: 20px;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+      }
+      20%, 22%, 24%, 55% {
+        opacity: 0.3;
+      }
+    }
+
+    .info {
+      margin-top: 30px;
+      font-size: 1rem;
+      color: #ccf7ff;
+      text-align: center;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    .back-btn {
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 10px #00ffff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffff;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <h2>🌐 Network Access Awareness</h2>
+
+  <div class="network-icon">
+    <i class="fas fa-wifi"></i>
+  </div>
+
+  <div class="info">
+    ⚠️ Network access allows apps to send and receive data over the internet.<br>
+    🔹 Malicious apps can exfiltrate sensitive data like passwords, photos, or contacts.<br>
+    🔹 Some apps may connect to shady servers or enable surveillance by third parties.<br>
+    🔹 Use a secure connection (VPN), monitor network usage, and allow access only to trusted apps.
+  </div>
+
+  <a class="back-btn" href="dashboard.html">🔙 Back to Dashboard</a>
+
+</body>
+</html>

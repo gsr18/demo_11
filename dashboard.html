@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Awareness Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background-color: #000;
+      color: #00ff00;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #00ff00;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #00ff00;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background-color: #000;
+      border: 2px solid #00ff00;
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      color: #00ff00;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #00ff00;
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div style="text-align: left; margin-bottom: 20px;">
+  <a href="index.html" style="
+    display: inline-block;
+    background-color: #00ff00;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 0 10px #00ff00;
+    transition: background-color 0.2s ease;
+  " onmouseover="this.style.backgroundColor='#00cc00'" onmouseout="this.style.backgroundColor='#00ff00'">
+    ⬅️ Back to Home
+  </a>
+</div>
+
+  <h1>💻 Cyber Safety Dashboard 💻</h1>
+
+  <div class="grid">
+    <a href="camera.html" class="card">
+      <i class="fas fa-camera"></i>
+      <p>Camera Access</p>
+    </a>
+    <a href="microphone.html" class="card">
+      <i class="fas fa-microphone"></i>
+      <p>Microphone</p>
+    </a>
+    <a href="calllogs.html" class="card">
+      <i class="fas fa-phone-alt"></i>
+      <p>Call Logs</p>
+    </a>
+    <a href="location.html" class="card">
+      <i class="fas fa-map-marker-alt"></i>
+      <p>Location</p>
+    </a>
+    <a href="storage.html" class="card">
+      <i class="fas fa-database"></i>
+      <p>Storage</p>
+    </a>
+    <a href="clipboard.html" class="card">
+      <i class="fas fa-clipboard"></i>
+      <p>Clipboard</p>
+    </a>
+    <a href="gallery.html" class="card">
+      <i class="fas fa-images"></i>
+      <p>Gallery</p>
+    </a>
+    <a href="behavior.html" class="card">
+      <i class="fas fa-brain"></i>
+      <p>Behavior</p>
+    </a>
+    <a href="notifications.html" class="card">
+      <i class="fas fa-bell"></i>
+      <p>Notifications</p>
+    </a>
+    <a href="screenrecord.html" class="card">
+      <i class="fas fa-desktop"></i>
+      <p>Screen Record</p>
+    </a>
+    <a href="bluetooth.html" class="card">
+      <i class="fas fa-bluetooth-b"></i>
+      <p>Bluetooth</p>
+    </a>
+    <a href="network.html" class="card">
+      <i class="fas fa-wifi"></i>
+      <p>Network</p>
+    </a>
+  </div>
+
+</body>
+</html>
